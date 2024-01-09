@@ -3,10 +3,6 @@ const { Telegraf } = require('telegraf');
 const { message } = require('telegraf/filters');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
-const Parse = require('parse/node');
-
-Parse.initialize("hZs01wOa42vE6ZRTfBvZqOjfBOlZb0ghi6w33IQT","WycOEo4n1SeLe9O4ZH3MdAgBURAFSWnc1ru4wGJF");
-Parse.serverURL = 'https://parseapi.back4app.com/'
 
 let movieArr = [];
 
@@ -89,7 +85,7 @@ axios({
           }
         })
 
-const bot = new Telegraf('6715614972:AAGyeJQ0r2mWzSlKXH9kJ3I1zLcK4c8exXo');
+const bot = new Telegraf(process.env.BOT_TOKEN);
 
 let { Markup } = require("telegraf");
 
